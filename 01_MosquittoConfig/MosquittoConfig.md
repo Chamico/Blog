@@ -44,7 +44,7 @@ typora-root-url: ./
 
 2、根据提示输入两次密码。
 
-![](/password.png)
+![](./password.png)
 
 3、修改 /etc/mosquitto/mosquitto.conf 文件，在文件末尾插入如下代码。[参考官网](https://mosquitto.org/documentation/authentication-methods)
 
