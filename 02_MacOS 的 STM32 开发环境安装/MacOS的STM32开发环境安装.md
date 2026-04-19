@@ -34,11 +34,11 @@
 
 目前市面上能买到的，大部分都是STlinkV2，支持 SWD 和 JTAG 烧录协议。项目中使用SWD，而不使用JTAG。
 
-![02_StlinkPhysic](/Users/chentianhai/Desktop/Blog/02_MacOS 的 STM32 开发环境安装/01_picture/02_StlinkPhysic.jpeg)
+![02_StlinkPhysic](./01_picture/02_StlinkPhysic.jpeg)
 
 引脚定义。这里有坑，不同的厂家出厂的STlink，在大功能上都是一样的，但是不排除某些引脚的定义不一样，所以在接线的时候，以厂家的引脚定义图为准。
 
-![02_StlinkPIn](/Users/chentianhai/Desktop/Blog/02_MacOS 的 STM32 开发环境安装/01_picture/02_StlinkPIn.png)
+![02_StlinkPIn](./01_picture/02_StlinkPIn.png)
 
 2、STM32的启动，共有三种模式
 
@@ -108,39 +108,39 @@
 
 1、工具链。也就是说这个项目后续使用什么开发环境。因为要使用VScode，所以选CMake比较好用。Project Manager->Project->Project Settings。Toolchain/IDE选CMake。
 
-![03_Toolchain](/Users/chentianhai/Desktop/Blog/02_MacOS 的 STM32 开发环境安装/01_picture/03_Toolchain.jpeg)
+![03_Toolchain](./01_picture/03_Toolchain.jpeg)
 
 2、调试模式。要选择swd模式，否则可能会出现下载一次之后，再次下载无法进入SWD模式，从而下载失败的问题。Pinout & Configuration->Categories->System Core->SYS。Debug选择 Trace Asynchronous Sw。
 
-![04_debug](/Users/chentianhai/Desktop/Blog/02_MacOS 的 STM32 开发环境安装/01_picture/04_debug.jpeg)
+![04_debug](./01_picture/04_debug.jpeg)
 
 ### 自定义配置（供参考）
 
 1、芯片选型
 
-![01_McuSelector](/Users/chentianhai/Desktop/Blog/02_MacOS 的 STM32 开发环境安装/01_picture/01_McuSelector.jpeg)
+![01_McuSelector](./01_picture/01_McuSelector.jpeg)
 
 2、使用FreeRTOS。Pinout & Configuration->Categories->Middleware and Software Packs->FREERTOS。选择CMSIS_V2。
 
-![05_FreeRTOS](/Users/chentianhai/Desktop/Blog/02_MacOS 的 STM32 开发环境安装/01_picture/05_FreeRTOS.jpeg)
+![05_FreeRTOS](./01_picture/05_FreeRTOS.jpeg)
 
 3、设置Timebase Source。因为使用了FreeRTOS，所以需要改，如果不用FreeRTOS，可以使用默认的SysTick。因为TIM4是一个通用定时器，可扩展的功能比较少。Pinout & Configuration->Categories->System Core->SYS。Timebase Source选择TIM4。
 
-![06_TimeBase](/Users/chentianhai/Desktop/Blog/02_MacOS 的 STM32 开发环境安装/01_picture/06_TimeBase.jpeg)
+![06_TimeBase](./01_picture/06_TimeBase.jpeg)
 
 4、时钟。不使用外部晶振，使用stm32内部的hsi就够了，所以不用修改。默认满足。Pinout & Configuration->Categories->System Core->RCC。
 
-![07_Clock](/Users/chentianhai/Desktop/Blog/02_MacOS 的 STM32 开发环境安装/01_picture/07_Clock.jpeg)
+![07_Clock](./01_picture/07_Clock.jpeg)
 
 5、GPIO（PA1 Output）。点灯测试用。
 
 
 
-## ![08_Gpio](/Users/chentianhai/Desktop/Blog/02_MacOS 的 STM32 开发环境安装/01_picture/08_Gpio.jpeg)代码生成
+## ![08_Gpio](./01_picture/08_Gpio.jpeg)代码生成
 
 6、配置路径，项目名称，点击生成代码即可。生成完了在对应路径下可以看到如下文件。
 
-![09_MXStructure](/Users/chentianhai/Desktop/Blog/02_MacOS 的 STM32 开发环境安装/01_picture/09_MXStructure.jpeg)
+![09_MXStructure](./01_picture/09_MXStructure.jpeg)
 
 ## VScode 编译、烧录
 
@@ -152,9 +152,9 @@
 
 点击左下角的生成，编译完成后显示生成了elf文件，则表示编译成功。
 
-![10_Genearte](/Users/chentianhai/Desktop/Blog/02_MacOS 的 STM32 开发环境安装/01_picture/10_Genearte.jpeg)
+![10_Genearte](./01_picture/10_Genearte.jpeg)
 
-![11_BuildFInish](/Users/chentianhai/Desktop/Blog/02_MacOS 的 STM32 开发环境安装/01_picture/11_BuildFInish.jpeg)
+![11_BuildFInish](./01_picture/11_BuildFInish.jpeg)
 
 ### 编码
 
