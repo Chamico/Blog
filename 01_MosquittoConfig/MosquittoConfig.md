@@ -1,7 +1,3 @@
----
-typora-root-url: ./
----
-
 # 序言
 
 本文适用于mqtt mosquitto部署的初步入门，旨在提供一个从0到1的基础操作指引，实现从基础部署到测试联调。关于本文中使用的mosquitto命令详细说明，请自行参考[官方文档](https://mosquitto.org/documentation/)或其他资料。
